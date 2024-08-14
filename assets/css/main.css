@@ -3219,3 +3219,37 @@ input, select, textarea {
 			}
 
 	}
+
+/* Ensures all work items have the same height */
+.work-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Adjusts the image to fit within the tile */
+.work-item .image {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Adds white background */
+    padding: 20px; /* Optional: Adjust padding as needed */
+}
+
+.work-item .image img {
+    max-height: 100px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain; /* Ensures the image retains its aspect ratio */
+    background-color: white; /* Adds white background to the image itself */
+}
+
+/* Styles for the headings and paragraphs */
+.work-item h3, .work-item p {
+    margin: 10px 0;
+}
